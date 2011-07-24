@@ -1,0 +1,36 @@
+Please note that this installer is not used when you just want to use
+the Pizzaproxy for one event. In that case please just copy the web
+dir into you web-root and run setup.php.
+
+Requirements:
+->  edit config.ini and adjust the values
+
+Usage:
+
+    python setup.py install <SHORTEVENTALIAS> <EVENTNAME>
+    python setup.py remove <SHORTEVENTALIAS> <EVENTNAME>
+
+Example:
+
+    python setup.py install orr11 'OpenRheinRuhr 2011'
+
+
+It will be reachable then under orr11.domain.tld
+
+What does this do? 
+
+(install)
+
+-> add config files for apache2
+-> create directories as specified in the config files
+-> move web files to the new directory
+-> restart apache2
+-> publish event
+
+(remove)
+
+-> remove apache2 config files
+-> remove directory but save database
+-> restart apache2
+-> unpublish event
+

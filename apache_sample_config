@@ -1,0 +1,13 @@
+<VirtualHost *:80>
+    ServerName PROJECT.DOMAIN
+    ServerAdmin webmaster@DOMAIN
+
+    DocumentRoot WWW-ROOTPROJECT.DOMAIN/htdocs
+    <Directory WWW-ROOTPROJECT.DOMAIN/htdocs>
+        Options Indexes FollowSymLinks MultiViews
+        AllowOverride None
+        Order allow,deny
+        allow from all
+    </Directory>
+
+</VirtualHost>
